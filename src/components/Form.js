@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {v4 as uuidv4} from 'uuid';
 import styled from 'styled-components';
 import {faPlus} from '@fortawesome/free-solid-svg-icons';
