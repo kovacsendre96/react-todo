@@ -35,7 +35,7 @@ const TodoList = ({list ,listItem, setList,}) =>{
 
 
     const ListWrapper = styled.div`
-      height:400px;
+      height:450px;
       border:2px solid #FFAA1B;
       overflow-y:scroll;
       border-radius:0 0 25px 25px;
@@ -44,6 +44,9 @@ const TodoList = ({list ,listItem, setList,}) =>{
       display:none;
       
     }
+    @media (min-width:900px){
+    height:600px;
+}
 
 
     `;

@@ -76,6 +76,10 @@ const Form = ({input, setInput, list,setList}) =>{
                 border-bottom: 3px solid;
                 border-bottom-color: #ffffff;  
             }
+
+            @media (min-width:900px){
+    width:400px;
+}
          
         }
 

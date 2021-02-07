@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Form from './components/Form';
 import Todo from './components/Todo';
 import TodoList from './components/TodoList';
-
+import styled from 'styled-components';
 
 
 function App (){
@@ -15,7 +15,7 @@ const [list,setList]=useState([]);
 
     return(
         
-    <div className='App'>
+    <MainContainer className='App'>
         <Form
         input={input}
         setInput={setInput}
@@ -29,10 +29,23 @@ const [list,setList]=useState([]);
         
         />
 
-    </div>
+    </MainContainer>
 
     )
 
 }
 
 export default App;
+
+
+const MainContainer = styled.div`
+
+margin: 0 auto 0 auto;
+
+@media (min-width:900px){
+    width:80%;
+}
+@media (min-width:1200px){
+    width:70%;
+}
+`;
