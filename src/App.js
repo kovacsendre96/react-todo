@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Form from './components/Form';
 import Todo from './components/Todo';
-import TodoList from './components/TodoList'
+import TodoList from './components/TodoList';
 
 
 
