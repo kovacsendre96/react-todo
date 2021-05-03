@@ -1,24 +1,24 @@
 import React from 'react';
-import {v4 as uuidv4} from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 import styled from 'styled-components';
-import {faPlus} from '@fortawesome/free-solid-svg-icons';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
-const Form = ({input, setInput, list,setList}) =>{
+const Form = ({ input, setInput, list, setList }) => {
 
 
-    const inputHandler = (e) =>{
+    const inputHandler = (e) => {
         setInput(e.target.value)
     };
 
 
 
-    const submitHandler = (e) =>{
+    const submitHandler = (e) => {
         e.preventDefault();
-        if(input==''){alert ("Please enter a to do!")}
-        else{
-            setList([...list,{task:input ,id:uuidv4(), did:false }])
+        if (input == '') { alert("Please enter a to do!") }
+        else {
+            setList([...list, { task: input, id: uuidv4(), did: false }])
 
         }
         setInput('')
@@ -27,28 +27,28 @@ const Form = ({input, setInput, list,setList}) =>{
 
 
     const onKeyUp = () => {
-      
-      };
 
-      
+    };
 
-    return(
+
+
+    return (
 
         <FormStyled onSubmit={submitHandler} className='Form'>
             <input placeholder="Type your to do" onKeyUp={(e) => onKeyUp(e)} value={input} onChange={inputHandler} type='text' ></input>
-            <button ><FontAwesomeIcon icon={faPlus}/> </button>
+            <button ><FontAwesomeIcon icon={faPlus} /> </button>
         </FormStyled>
 
 
     )
 
 
-    }
+}
 
-    export default Form;
+export default Form;
 
 
-    const FormStyled = styled.form`
+const FormStyled = styled.form`
         width:100%;
         height:80px;
         background:#FFAA1B;
@@ -65,18 +65,19 @@ const Form = ({input, setInput, list,setList}) =>{
             background:#FFC95E;
             color:white;
             text-align:center;
+            outline:none;
+        
+
 
             &::placeholder{
                 color:white;
                 text-align:center;
                 opacity:0.7;
+                
             }
 
-            &:focus{
-                border-bottom: 3px solid;
-                border-bottom-color: #ffffff;  
-            }
-
+           
+        
             @media (min-width:900px){
     width:400px;
 }
@@ -89,7 +90,7 @@ const Form = ({input, setInput, list,setList}) =>{
             text-decoration: none;
             background: #3fce37;
             padding: 15px;
-            border-radius: 20px;
+            border-radius: 8px;
             display: inline-block;
             border: none;
             transition: all 0.4s ease 0s;

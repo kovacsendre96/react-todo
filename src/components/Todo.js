@@ -64,6 +64,7 @@ const TodoItem = styled.div`
     color:white;
     border:1px solid white;
     transition:0.4s;
+
     &:hover{
         background:#909090;
         button{
@@ -75,16 +76,19 @@ const TodoItem = styled.div`
     p{
         width:50%;
         text-align:center;
+        cursor:pointer
     }
     div{
         width:50%;
             text-align:center;
         button{
             color:#FFAA1B;
-            background:#5C5C5C ;
+            background:#5C5C5C;
             border:none;
             font-size:1.5rem;
             transition:0.4s;
+            outline:none;
+            cursor:pointer;
          
         }
     }
